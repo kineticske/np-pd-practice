@@ -31,3 +31,11 @@ print('---------------------------')
 S_Notas=pd.Series(Notas_Alumnos)
 S_estadisticas=pd.Series([S_Notas.min(), S_Notas.max(), S_Notas.mean(), S_Notas.std()], index=['Minimo', 'Maximo', 'Media', 'Desviación'])
 print(S_estadisticas)
+
+#combinacion con el 3 para los aprobados
+Aprobados=S_Notas[S_Notas.values>3.0].sort_values(0, ascending=False)
+print('Alumnos Aprobados\n', Aprobados)
+
+print('---------------------------')
+print('------EN GENERAL-------')
+print(S_Notas)
